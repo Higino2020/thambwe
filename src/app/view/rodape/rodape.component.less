@@ -26,6 +26,7 @@
                 color: #000000;
             }
             .icones{
+                cursor: pointer;
                 img{
                     margin-right: 19px;
                 }
@@ -33,6 +34,9 @@
         }
         .menu{
             padding-left: 0;
+            @media (max-width: 426px) {
+                padding: 1rem 0;
+            }
             h4{
                 font-family: 'Poppins';
                 font-style: normal;
@@ -43,6 +47,11 @@
             }
             .menuFooter{
                 display: flex;
+                flex-wrap: wrap;
+
+                @media (max-width: 426px) {
+                    flex-flow: column;
+                }
             }
             .menu-thambwe{
                 list-style: none;
@@ -51,6 +60,9 @@
                 margin-right: 25px;
 
                 li{
+                    @media (max-width: 426px) {
+                        display: block;
+                    }
                     a{
                         text-decoration: none;
                         font-family: 'Poppins';
@@ -92,7 +104,12 @@
             display: block !important;
             padding-bottom: 40px !important;
             .contacto{
-                margin-right: 81px;
+                // margin-right: 81px;
+                // add dev
+                text-align: center;
+                width: 100%;
+
+
                 img{
                     margin-bottom: 5px;
                 }
@@ -126,7 +143,7 @@
                 .menu-thambwe{
                     list-style: none;
                     padding-left: 0;
-    
+
                     li{
                         a{
                             text-decoration: none;

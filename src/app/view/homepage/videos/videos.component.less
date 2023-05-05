@@ -9,12 +9,21 @@
             font-style: normal;
             font-weight: 700;
             font-size: 45px;
+            text-align: center;
             line-height: 118.5%;
             color: #000000;
+
+            @media (max-width: 625px) 
+            {
+              text-align: center;
+              font-size: 1.56rem!important;
+            }
         }
     }
     .vidoes{
         display: flex;
+        justify-content: center;
+
         width: 100%;
         .cartao{
             background-image: url(../../../../assets/img/Rectangle14.png), url(../../../../assets/img/base_Preto.png);
@@ -46,7 +55,7 @@
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 35px !important;
+                font-size: 35px;
                 line-height: 118.5%;
                 color: #000000;
             }
@@ -69,5 +78,26 @@
                 margin-bottom:10px ;
             }
         }
+    }
+}
+
+
+.web
+{
+    display: block;
+
+    @media (max-width: 625px) 
+    {   
+        display: none!important;
+    }
+}
+
+.mobile
+{
+    display: none;
+
+    @media (max-width: 625px) 
+    {   
+        display: block!important;
     }
 }

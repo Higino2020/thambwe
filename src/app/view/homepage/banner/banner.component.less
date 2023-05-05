@@ -1,28 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-.fundo-thambwe{
-  width: 100%;
-  background-image: url('../../../../assets/img/Rectangle12.png'), url('../../../../assets/img/base_Preto.png');
-  background-blend-mode: multiply;
-  height: 660px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 70px;
-  .base{
 
-    .ladoImg{
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+.banner{
+   width: 100%;
+   height: 800px;
+   margin: 0;
+   padding: 0;
+   position: relative;
+
+   @media (max-width: 625px) {
+      height: 500px;
+   }
+
+    .fundo-img
+    {
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      &::after
+      {
+        z-index: 0;
+        inset: 0px;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        background: rgba(34, 34, 34, 0.548);
+      }
+
+      img
+      {
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+
+   .inside-content{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      z-index: 1;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      padding-left: 200px;
-      padding-top: 120px;
-    }
-    .texteControl{
-      padding-left: 200px;
-      padding-top: 140px;
-      div{
-        padding-top: 20px;
-        h6{
+      gap: 4em;
+
+      @media (max-width: 625px) {
+        gap: 2rem;
+        height: unset;
+        flex-flow: column;
+     }
+
+
+      .img-tambwe{
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @media (max-width: 625px) 
+        {
+          width: 150px;
+        height: 150px;
+        }
+
+        img
+        {
+          width: 100%;
+          height: 100%;
+          object-fit: scale-down;
+        }
+      }
+
+      .textcontrol{
+        width: 640px; 
+        padding: 0 2rem;
+
+        @media (max-width: 625px) 
+        {
+          width: 100%;
+          padding: 0px 0rem;
+          text-align: center;
+        }
+
+        z-index: 1;
+         h6{
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 700;
@@ -33,24 +104,28 @@
           order: 1;
           align-self: center;
           flex-grow: 0;
-          img{
-            margin-right: 10px;
+         }
+         h4{
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 44px;
+          line-height: 54px;
+          color: #FFFFFF;
+          text-shadow: 0px 2px 0px rgba(34, 34, 34, 0.1);
+          flex: none;
+          order: 1;
+          align-self: center;
+          flex-grow: 0;
+
+          @media (max-width: 625px)
+          {
+            width: 100%;
+            font-size: 1.4rem;
+            line-height: unset;
           }
-        }
-        h4{
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 44px;
-            line-height: 54px;
-            color: #FFFFFF;
-            text-shadow: 0px 2px 0px rgba(34, 34, 34, 0.1);
-            flex: none;
-            order: 1;
-            align-self: center;
-            flex-grow: 0;
-        }
-        p{
+         }
+         p{
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 400;
@@ -60,134 +135,53 @@
           flex: none;
           order: 1;
           flex-grow: 0;
-        }
+
+          @media (max-width: 625px)
+          {
+            width: 100%;
+            font-size: 1.2rem;
+            line-height: unset;
+          }
+         }
+
       }
-    }
-  }
+   }
 }
+
 .efeito-estranho{
   background: #7F1D1D;
   height: 13px;
   width: 100%;
 }
-.logotipos{
+
+.parceiros{
+  height: 200px;
+  width: 100%;
+  margin-bottom: 4px;
   display: flex;
   justify-content: center;
-  padding-top: 92px;
-  padding-bottom: 90px;
- 
-  .logo{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .img1{
-      width: 80%;
-      height: 70px;
-    }
-    .img2{
-      height: 56px;
-      margin-left: 18px;
-      margin-top: 10px;
-    }
-  }
-}
+  align-items: center;
 
+  @media (max-width: 625px) 
+  {
+    height: unset;
+    margin-block: 2rem;
+  }
 
-@media (max-width: 764px) {
-  .fundo-thambwe{
-    width: 100%;
-    background-image: url('../../../../assets/img/Rectangle12.png'), url('../../../../assets/img/base_Preto.png');
-    background-blend-mode: multiply;
-    height: 660px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 70px;
-    .base{
-  
-      .ladoImg{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0 !important;
-        img{
-          width: 200px;
-        }
-      }
-      .texteControl{
-        padding-left: 0px !important;
-        padding-top: 0px !important;
-        div{
-          padding-top: 20px;
-          h6{
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 24px;
-            color: #FFFFFF;
-            flex: none;
-            order: 1;
-            align-self: center;
-            flex-grow: 0;
-            img{
-              margin-right: 10px;
-            }
-          }
-          h4{
-              font-family: 'Montserrat';
-              font-style: normal;
-              font-weight: 700;
-              font-size: 24px !important;
-              line-height: 34px;
-              color: #FFFFFF;
-              text-shadow: 0px 2px 0px rgba(34, 34, 34, 0.1);
-              flex: none;
-              order: 1;
-              align-self: center;
-              flex-grow: 0;
-          }
-          p{
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px !important;
-            line-height: 38px;
-            color: #FFFFFF;
-            flex: none;
-            order: 1;
-            flex-grow: 0;
-          }
-        }
-      }
+  img{
+     height: 66px;
+  }
+
+  .logo-musickool{
+    height: 50px;
+    width: 180px;
+    display: inline-block;
+    margin: 4px 0 0 4px;
+
+    @media (max-width: 625px) 
+    {
+     display: inline-block; 
     }
   }
-  .efeito-estranho{
-    background: #7F1D1D;
-    height: 13px;
-    width: 100%;
-  }
-  .logotipos{
-    display: flex;
-    justify-content: center;
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
-    padding-left: 6.7%;
-    padding-right: 6.7%;
-   
-    .logo{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      .img1{
-        width: 80%;
-        height: 30px;
-      }
-      .img2{
-        height: 26px;
-        margin-left: 18px;
-        margin-top: 5px;
-      }
-    }
-  }
-  
+
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,6 @@ import { MusicosComponent } from './view/homepage/musicos/musicos.component';
 import { RodapeComponent } from './view/rodape/rodape.component';
 import { FolcloreComponent } from './view/folclore/folclore.component';
 import { FormsModule } from '@angular/forms';
-//import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -33,15 +33,16 @@ import { FormsModule } from '@angular/forms';
     GaleriaComponent,
     MusicosComponent,
     RodapeComponent,
-    FolcloreComponent
+    FolcloreComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
+    CarouselModule,
     HttpClientModule,
-    FormsModule
-   // FontAwesomeModule
+    // FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
